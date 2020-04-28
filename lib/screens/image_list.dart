@@ -21,7 +21,6 @@ class _ImageListState extends State<ImageList> {
 
   @override
   Widget build(BuildContext context) {
-    refreshList();
     return Scaffold(
       appBar: AppBar(
         title: Text('Images'),
@@ -53,11 +52,6 @@ class _ImageListState extends State<ImageList> {
         },
       ),
     );
-  }
-
-  void refreshList() async {
-    imagesList = await createListImage(response);
-    setState(() {});
   }
 
   Future<String> getData() async {
